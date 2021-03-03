@@ -1478,6 +1478,24 @@
         },
         {
             "name": "laminas/laminas-code",
+
+            "version": "3.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-code.git",
+                "reference": "1cb8f203389ab1482bf89c0e70a04849bacd7766"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-code/zipball/1cb8f203389ab1482bf89c0e70a04849bacd7766",
+                "reference": "1cb8f203389ab1482bf89c0e70a04849bacd7766",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-eventmanager": "^2.6 || ^3.0",
+                "laminas/laminas-zendframework-bridge": "^1.0",
+                "php": "^7.1"
+
             "version": "4.0.0",
             "source": {
                 "type": "git",
@@ -1493,6 +1511,7 @@
             "require": {
                 "laminas/laminas-eventmanager": "^3.3",
                 "php": "^7.4 || ~8.0.0"
+
             },
             "conflict": {
                 "phpspec/prophecy": "<1.9.0"
@@ -1501,6 +1520,26 @@
                 "zendframework/zend-code": "self.version"
             },
             "require-dev": {
+
+                "doctrine/annotations": "^1.7",
+                "ext-phar": "*",
+                "laminas/laminas-coding-standard": "^1.0",
+                "laminas/laminas-stdlib": "^2.7 || ^3.0",
+                "phpunit/phpunit": "^7.5.16 || ^8.4"
+            },
+            "suggest": {
+                "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
+                "laminas/laminas-stdlib": "Laminas\\Stdlib component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4.x-dev",
+                    "dev-develop": "3.5.x-dev",
+                    "dev-dev-4.0": "4.0.x-dev"
+                }
+            },
+
                 "doctrine/annotations": "^1.10.4",
                 "ext-phar": "*",
                 "laminas/laminas-coding-standard": "^2.1.4",
@@ -1515,6 +1554,7 @@
                 "laminas/laminas-zendframework-bridge": "A bridge with Zend Framework"
             },
             "type": "library",
+
             "autoload": {
                 "psr-4": {
                     "Laminas\\Code\\": "src/"
@@ -1528,8 +1568,12 @@
             "homepage": "https://laminas.dev",
             "keywords": [
                 "code",
+
+                "laminas"
+
                 "laminas",
                 "laminasframework"
+
             ],
             "support": {
                 "chat": "https://laminas.dev/chat",
@@ -1539,6 +1583,9 @@
                 "rss": "https://github.com/laminas/laminas-code/releases.atom",
                 "source": "https://github.com/laminas/laminas-code"
             },
+
+            "time": "2019-12-31T16:28:24+00:00"
+
             "funding": [
                 {
                     "url": "https://funding.communitybridge.org/projects/laminas-project",
@@ -1546,6 +1593,7 @@
                 }
             ],
             "time": "2020-12-30T16:16:14+00:00"
+
         },
         {
             "name": "laminas/laminas-eventmanager",
