@@ -18,4 +18,12 @@ class SortiesController extends AbstractController
             'path' => 'src/Controller/SortiesController.php',
         ]);
     }
+
+
+/**
+ * @Route("/monprofil", name="sorties_monprofil")
+ */
+public function monprofil() {
+    return $this ->render('/monprofil.html.twig');
+}
 }

@@ -39,7 +39,7 @@
             "config/packages/doctrine.yaml",
             "config/packages/prod/doctrine.yaml",
             "src/Entity/.gitignore",
-            "src/Repository/.gitignore"
+            "src/Repository/.gitignore",
             "./config/packages/doctrine.yaml",
             "./config/packages/prod/doctrine.yaml",
             "./src/Entity/.gitignore",
@@ -57,12 +57,27 @@
         "files": [
 
             "config/packages/doctrine_migrations.yaml",
-            "migrations/.gitignore"
+            "migrations/.gitignore",
 
             "./config/packages/doctrine_migrations.yaml",
             "./migrations/.gitignore"
 
         ]
+    },
+    "doctrine/event-manager": {
+        "version": "1.1.1"
+    },
+    "doctrine/cache": {
+        "version": "1.10.2"
+    },
+    "doctrine/collections": {
+        "version": "1.6.7"
+    },
+    "doctrine/common": {
+        "version": "3.1.1"
+    },
+    "doctrine/dbal": {
+        "version": "2.12.1"
     },
     "doctrine/event-manager": {
         "version": "1.1.1"
@@ -93,7 +108,7 @@
     },
     "laminas/laminas-code": {
 
-        "version": "3.4.1"
+        "version": "3.4.1",
 
         "version": "4.0.0"
 
@@ -103,6 +118,12 @@
     },
     "laminas/laminas-zendframework-bridge": {
         "version": "1.2.0"
+    },
+    "doctrine/orm": {
+        "version": "2.8.2"
+    },
+    "doctrine/persistence": {
+        "version": "2.1.0"
     },
     "nikic/php-parser": {
         "version": "v4.10.4"

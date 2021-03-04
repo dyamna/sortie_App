@@ -6,6 +6,8 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Utilisateur;
+
 
 class UtilisateurController extends AbstractController
 {
@@ -31,8 +33,8 @@ class UtilisateurController extends AbstractController
         $utilisateur->setNom("BRUNI");
         $utilisateur->setPrenom("Carla");
         $utilisateur->setTelephone("0649831259");
-        $utilisateur->setMail("carla@gmail.com");
-        $utilisateur->setMotPasse("P@ssword");
+        $utilisateur->setEmail("carla@gmail.com");
+        $utilisateur->setPassword("P@ssword");
 
         $em->persist($utilisateur);
         $em->flush();
