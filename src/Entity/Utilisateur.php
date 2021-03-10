@@ -4,11 +4,13 @@ namespace App\Entity;
 
 use App\Repository\UtilisateurRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+
 
 /**
  * @ORM\Entity(repositoryClass=UtilisateurRepository::class)
  */
-class Utilisateur
+class Utilisateur implements UserInterface
 {
     /**
      * @ORM\Id
@@ -16,6 +18,12 @@ class Utilisateur
      * @ORM\Column(type="integer", unique=true)
      */
     private $utilisateurId;
+
+
+    /**
+     *@ORM\Column(type="string", length=50, unique=true )
+     */
+    private $pseudo;
 
 
 
@@ -75,6 +83,11 @@ class Utilisateur
 
 
     #-----------------------------------------GETTERS & SETTERS--------------------------------------------
+    /**
+     * @var string
+     */
+    private $setAdministrateur;
+
     /**
      * @return mixed
      */
@@ -212,4 +225,37 @@ class Utilisateur
         $this->actif = $actif;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPseudo()
+    {
+        return $this->pseudo;
+    }
+
+    /**
+     * @param mixed $pseudo
+     */
+    public function setPseudo($pseudo): void
+    {
+        $this->pseudo = $pseudo;
+    }
+
+
+    public function getRoles()
+    {
+        return ["ROLE_USER"];
+    }
+
+
+
+    public function getUsername()
+    {
+        return $this->getPseudo();
+    }
+
+
+    public function getSalt(){return null;}
+
+    public function eraseCredentials(){}
 }

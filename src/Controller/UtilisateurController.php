@@ -11,15 +11,7 @@ use App\Entity\Utilisateur;
 
 class UtilisateurController extends AbstractController
 {
-    /**
-     * @Route("/utilisateur", name="utilisateur")
-     */
-    public function index(): Response
-    {
-        return $this->render('utilisateur/index.html.twig', [
-            'controller_name' => 'UtilisateurController',
-        ]);
-    }
+
 
 
     /**
@@ -30,16 +22,39 @@ class UtilisateurController extends AbstractController
         //@todo: traiter le formulaire...
 
         $utilisateur = new Utilisateur();
-        $utilisateur->setNom("BRUNI");
-        $utilisateur->setPrenom("Carla");
-        $utilisateur->setTelephone("0649831259");
-        $utilisateur->setEmail("carla@gmail.com");
-        $utilisateur->setPassword("P@ssword");
+
+        $utilisateur->setPseudo("Sarko");
+        $utilisateur->setNom("SARKOZY");
+        $utilisateur->setPrenom("Nicolas");
+        $utilisateur->setTelephone("0649831249");
+        $utilisateur->setEmail("sarko@gmail.com");
+        $utilisateur->setPassword("sswordP@");
+        $utilisateur->setAdministrateur ("true");
+        $utilisateur->setOrganisateur ("false");
+        $utilisateur->setActif ("false");
+
+
+
 
         $em->persist($utilisateur);
         $em->flush();
 
-        return $this->render('utilisateur/add.html.twig');
+        return $this->render('utilisateur/ajouter.html.twig');
     }
 
+    /**
+     * @Route("/login", name="login")
+     */
+public function login() {
+
+        return $this->render("main/login.html.twig", [
+
+        ]);
+}
+
+
+    /**
+     * @Route("/logout", name="logout")
+     */
+public function logout(){}
 }

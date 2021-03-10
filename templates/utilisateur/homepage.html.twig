@@ -1,0 +1,83 @@
+{% extends ("base.html.twig") %}
+
+{% block main %}
+
+
+
+    <div class="jumbotron mt-3">
+
+        <h3> Filtrer les sorties</h3>
+            <br>
+        <br>
+
+
+        <select name="campus" id="campus-select">
+            <option value="campus-choice">--Campus:--</option>
+            <option value="Saint-Herblain">Saint-Herblain</option>
+            <option value="Nantes">Nantes</option>
+            <option value="Rennes">Rennes</option>
+            <option value="Niort">Niort</option>
+
+        </select>
+
+            <br>
+            <br>
+
+        <form>
+            <div>
+                <label for="word-search">Le nom de la sortie contient:</label>
+                <input type="search" id="Recherche" name="q"
+                       placeholder="search" size="30">
+
+            </div>
+        </form>
+    {# --------------------dates--------------------------#}
+
+                <div class="col-md-6">
+            <label for="start">Entre:</label>
+
+            <input type="date" id="start" name="trip-start"
+                   value="2021-03-04"
+                   min="2015-03-04" max="2021-03-04">
+
+
+            <label for="end">et:</label>
+
+            <input type="date" id="end" name="trip-end"
+                   value="2021-03-04"
+                   min="2015-03-04" max="2021-03-04">
+
+
+    <br>
+
+    {# --------------------checkboxes--------------------------#}
+
+            <div>
+                <input type="checkbox" id="sorties-organisées" name="sorties-organisées"
+                       checked>
+                <label for="sorties-organisées">Sorties dont le suis l'organisateur/trice</label>
+            </div>
+            <div>
+                <input type="checkbox" id="sortie_inscrit" name="sortie_inscrit">
+                <label for="sortie_inscrit">Sorties auxquelles je suis inscrit/e</label>
+            </div>
+            <div>
+                <input type="checkbox" id="sorties_non_inscrit" name="sorties_non_inscrit">
+                <label for="sorties_non_inscrit">Sorties auxquelles je suis pas inscrit/e</label>
+            </div>
+            <div>
+                <input type="checkbox" id="sorties_passée" name="sorties_passées">
+                <label for="sorties_passées">Sortie passées</label>
+            </div>
+
+            <br>
+
+            <button >Rechercher</button>
+    </div>
+
+
+    <h1> TABLE SORTIE</h1>
+    <button>Créer une sortie </button>
+
+
+{% endblock %}
